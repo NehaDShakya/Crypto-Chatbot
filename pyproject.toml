@@ -1,0 +1,33 @@
+[project]
+name = "crypto-chatbot"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Neha Devi Shakya", email = "nehadshakya@gmail.com" }
+]
+dependencies = [
+    "pandas>=2.2.3",
+    "streamlit>=1.45.0",
+    "langchain>=0.3.25",
+    "langchain-community>=0.3.23",
+    "openai>=1.77.0",
+    "tiktoken>=0.9.0",
+    "faiss-cpu>=1.11.0",
+    "zep-cloud>=2.12.1",
+]
+readme = "README.md"
+requires-python = ">= 3.10"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/crypto_chatbot"]
